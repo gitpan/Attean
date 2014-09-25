@@ -1,0 +1,139 @@
+This file contains message digests of all files listed in MANIFEST,
+signed via the Module::Signature module, version 0.73.
+
+To verify the content in this distribution, first make sure you have
+Module::Signature installed, then type:
+
+    % cpansign -v
+
+It will check each file's integrity, as well as the signature's
+validity.  If "==> Signature verified OK! <==" is not displayed,
+the distribution may already have been compromised, and you should
+not run its Makefile.PL or Build.PL.
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+SHA1 898f114d156e0a4c7dd7c692bc087b1d6a7fbf0f Changes.ttl
+SHA1 5acc236e2dbd310b47b997a6189949afcabf030f LICENSE
+SHA1 521798a1aed41997eddeb7c071808eb8c8f2756e MANIFEST
+SHA1 b5e08142802980363120b826b66976056da36287 META.yml
+SHA1 5a626da3a0c6f34872ce8d5a36de3498c502b105 Makefile.PL
+SHA1 a7be1aa9b53aa9651fe8ca7a7913caad1e21900a README.md
+SHA1 99b5ecbefe69ba22de9ad2f763295216bdc30a36 bin/attean_parse
+SHA1 9bd2106fdab94d22f7d4d59329c02a656c0723a4 bin/canonicalize_bgp.pl
+SHA1 221e473f2a9d3819bce001095c1f3c0582aebe5f bin/query.pl
+SHA1 9b5001bfa9cf8607b3b3935284d9253e0391c9f1 inc/Module/Install.pm
+SHA1 d001b4b9a48395a8c4134b234a0e1789138427c5 inc/Module/Install/AuthorTests.pm
+SHA1 cab0e564f9bdf658535f683aa197157e06d0dcea inc/Module/Install/Base.pm
+SHA1 a1559b5b3b40f68efbbd256f4fef85970891b3ae inc/Module/Install/Can.pm
+SHA1 f15c1ba85f6d52e70c48c64bf0752c90a4ad66f9 inc/Module/Install/Fetch.pm
+SHA1 eb48df8bafd07c6a862126d9b274df42b4395742 inc/Module/Install/Makefile.pm
+SHA1 95c73873c6c3cb7024614c225c53863e1e90c134 inc/Module/Install/Metadata.pm
+SHA1 a1820d820772de5eb9c190425babf2c29a2caaf7 inc/Module/Install/Scripts.pm
+SHA1 f8b2ae3386f6ba26c33408968a953d450842eade inc/Module/Install/Win32.pm
+SHA1 f302bc703d76299cff243e5b44cecd61aac27b76 inc/Module/Install/WriteAll.pm
+SHA1 fee22142cb932005c3ef34ec3d81a1ee93f0aae9 lib/Attean.pm
+SHA1 d1b125a6bd6f67a77b883869c81844395d402367 lib/Attean/API.pm
+SHA1 337bc243a9985401c844debd4e569105efbaefa5 lib/Attean/API/AbbreviatingParser.pod
+SHA1 27d7dffca0812494980006829314e7d596e02656 lib/Attean/API/AbbreviatingSerializer.pod
+SHA1 6e6c510a24a22af92744c9403e85de712917b6fb lib/Attean/API/AppendableSerializer.pod
+SHA1 3862608f5aa36de466cb1f7bc063dd904b0bfa00 lib/Attean/API/AtOnceParser.pod
+SHA1 1f4fbcc70018a44ea4dab25ff7fb74302313b367 lib/Attean/API/Binding.pm
+SHA1 69304741918d36031bae1123b538336a278f89ad lib/Attean/API/BlankOrIRI.pod
+SHA1 bcf3197e19593d17eb53e8c866cd8d3e80ab2038 lib/Attean/API/Expression.pm
+SHA1 760addb991f7966f977347beb9aebe2f371512b3 lib/Attean/API/Iterator.pm
+SHA1 83b451bc1ebf6adc084d952d371def127620fbb4 lib/Attean/API/MixedStatementParser.pod
+SHA1 513e5382859c6fd7ebca5efba485254881f7af8c lib/Attean/API/MixedStatementSerializer.pod
+SHA1 ce27183dbecbbb437c7e7ee282e5579a2629838f lib/Attean/API/Model.pm
+SHA1 85872a3f558851fba868ccff1ffb5ba2e488b6c9 lib/Attean/API/Parser.pm
+SHA1 084abeda25d1faab8a0d8dd5d30ca01b4bce9a0c lib/Attean/API/PullParser.pod
+SHA1 22210099b028fe3e2ee512a61830651446e4e1db lib/Attean/API/PushParser.pod
+SHA1 23cb6cd4d5b7dfef5746cb7f3a3d0399572f4bac lib/Attean/API/Quad.pod
+SHA1 765648f64ac38a42322e190f9e8a545b270f79ab lib/Attean/API/QuadParser.pod
+SHA1 adda6cb8d5060f6846088aeecc0a12f12dbe1229 lib/Attean/API/QuadPattern.pod
+SHA1 21f420a3c19eb0c7a5309cd85b618cd6d4719aeb lib/Attean/API/QuadSerializer.pod
+SHA1 545c943de25d087d828b0abb70b13e5de3a1d839 lib/Attean/API/Query.pm
+SHA1 cb4a06d2e872b1defd69eb105f113d291384ea63 lib/Attean/API/Result.pod
+SHA1 d26ba99688d69521162c873a629fd2204330496d lib/Attean/API/ResultParser.pod
+SHA1 fc69c650cba0d36915fdecd4f98a92e111ff9c57 lib/Attean/API/ResultSerializer.pod
+SHA1 9368c04ff08183c5b5e99f7dc8767e787b4fd13e lib/Attean/API/Serializer.pm
+SHA1 35f408e6978ebbb7c72a89f0aba223d41292d0d5 lib/Attean/API/Store.pm
+SHA1 5385a5d629875ed99df4a57e19b0222b676ddb95 lib/Attean/API/Term.pm
+SHA1 2406ba90d1389b28fd364fb266b1793f515e8ce6 lib/Attean/API/TermOrVariable.pod
+SHA1 01b9391b2a261a0b185aa8a7734477ea5a12f7ed lib/Attean/API/TermParser.pod
+SHA1 8a21f7d153b215858cd4d0940205367ec18fecaa lib/Attean/API/TermSerializer.pod
+SHA1 b3d4ecbb36a28713126794c9e1ef78267d3431df lib/Attean/API/Triple.pod
+SHA1 f3db65cf67941a915cd99a8a3c8e0c744b232081 lib/Attean/API/TripleOrQuad.pod
+SHA1 7b9536ee465ea5b33efd508b5340d01560741094 lib/Attean/API/TripleParser.pod
+SHA1 f6829c6b971a1491b56e1ba90bd57c25a001bfb3 lib/Attean/API/TriplePattern.pod
+SHA1 605837ca2b767d7af6d593274a9c090a4b17def6 lib/Attean/API/TripleSerializer.pod
+SHA1 74a65cc17c3a083ff4ff29c2e283105b17da7d70 lib/Attean/API/Variable.pod
+SHA1 ad52b0b0a0724ef36d2cc7b641b9a9510f85fd55 lib/Attean/Algebra.pm
+SHA1 0c8e8bfa3cfb1475c08d4ab52087d53aff1090b1 lib/Attean/BindingEqualityTest.pm
+SHA1 99124918bbb7ceeb4ff90b7707baa24e6b163d79 lib/Attean/Blank.pm
+SHA1 d298ee33ae6f9eb67ee45dfab542a172667afddf lib/Attean/CodeIterator.pm
+SHA1 27b68f591fda6246634ff0ac98017e2215b701e9 lib/Attean/Expression.pm
+SHA1 da0aec57707edc662c8b47ed678e8f90be8f90c5 lib/Attean/IRI.pm
+SHA1 852bafa1baf19d1f4a0fc3d2f6bea0f7ef05eee8 lib/Attean/IteratorSequence.pm
+SHA1 a68dd60f2946ef5f23befe9c017940e8e874d35b lib/Attean/ListIterator.pm
+SHA1 41a431a5b9e4a42d5c218e7387ddfbc063dd2c22 lib/Attean/Literal.pm
+SHA1 5e748f768a77708fb4f87adeae50d08ba0bf1936 lib/Attean/Quad.pm
+SHA1 7ff77fa95c6e26473f52e14d724b2747d1c7bb1f lib/Attean/QuadModel.pm
+SHA1 7a81efe3688472870555a5c26b6b413a19c81461 lib/Attean/RDF.pm
+SHA1 3c0f6f59b2682d7c6dc48d5daa632e9394d70669 lib/Attean/Result.pm
+SHA1 31ab89a3e11f194d6faf4596f02dbe184580d34d lib/Attean/SimpleQueryEvaluator.pm
+SHA1 65a01ccea65ec81b8096d5e37e7cbff09e30f9d2 lib/Attean/TermMap.pm
+SHA1 5d03b7100b0055ef1a6af3b27987fc061b2a7ff8 lib/Attean/Triple.pm
+SHA1 2a640256a8904b68fc4d7815c656e9f9e4cf828f lib/Attean/Variable.pm
+SHA1 77176f8a8ab5c23686151575cf8f20606871792c lib/AtteanX/Parser/NQuads.pm
+SHA1 abef1d9ba24fcf16e1e95b00e8b6e69dcce0d613 lib/AtteanX/Parser/NTriples.pm
+SHA1 2e82a0980997176d3551c941948f7ef237e06490 lib/AtteanX/Parser/NTuples.pm
+SHA1 6d797ea26c3690300b0c0c2c1087b71dd161f50f lib/AtteanX/Parser/RDFXML.pm
+SHA1 98707d2fed5409971d2c4210fe6480bbe336a092 lib/AtteanX/Parser/SPARQLJSON.pm
+SHA1 d377d74bcf8f5628143e91124e9a823655037ffd lib/AtteanX/Parser/SPARQLTSV.pm
+SHA1 5acfca9f86f336f4a5f774be216895da7791abb0 lib/AtteanX/Parser/SPARQLXML.pm
+SHA1 47a0e1069f9ad304d2120338e30e78daff52ead3 lib/AtteanX/Parser/SPARQLXML/SAXHandler.pm
+SHA1 cf6fe25dc4bba44099010207ce3ab1fafea703e5 lib/AtteanX/Parser/Turtle.pm
+SHA1 37597a29fcb02ea6b38e422e37fb14aa4279e2ad lib/AtteanX/Parser/Turtle/Constants.pm
+SHA1 fc1bd1f1b2be1fea0b32f1221c973c60a0db0360 lib/AtteanX/Parser/Turtle/Lexer.pm
+SHA1 6acdfd52e2cfa9dc37941d930c3cb41c62cd5fcb lib/AtteanX/Parser/Turtle/Token.pm
+SHA1 5baa8b71bde344ac543c7e4c86c7f3ec8e09f808 lib/AtteanX/Serializer/CanonicalNTriples.pm
+SHA1 649080914eebed5c616d000164140c93556ddab0 lib/AtteanX/Serializer/NQuads.pm
+SHA1 9c8e298b2cec17fc0509b2ff03fd953aaa942c2d lib/AtteanX/Serializer/NTriples.pm
+SHA1 595adfcab83102a57ed205db8f9ed4596278008d lib/AtteanX/Serializer/NTuples.pm
+SHA1 7e9fe08670c507ed35a395e4db86b6dd0877ec4d lib/AtteanX/Serializer/SPARQLTSV.pm
+SHA1 40046929105c88f0778b0630d14ec31f3bce1586 lib/AtteanX/Store/Memory.pm
+SHA1 f7bda411f9cb3c5a6c23effb1b3c1b7752fabbb3 lib/AtteanX/Store/Simple.pm
+SHA1 2392481e08460c40fa64bb9a25a14bf9c541e4f3 t/00.load.t
+SHA1 11b1685b1f77f228249a80b06b86f713fbe04066 t/algebra.t
+SHA1 db9e4f2c2a5cc61fd5c60373a071a70877363e76 t/binding-equality.t
+SHA1 5d819a3c9fd376ac7c1f07dafef255b7c9afdecc t/binding.t
+SHA1 9c573dbbc3ce87e3d8007a5f4de6e33bc7015e35 t/expression.t
+SHA1 6752bfe76bbc4e5eabc4c20a8efcd3c77a763c01 t/iter.t
+SHA1 3ff79fba8bd41fdc4af86381c77fee1a2257830f t/model-quad.t
+SHA1 aec63d0a95d85a91cd7654943152523f99ad8e57 t/parser-nquads.t
+SHA1 c781ae777d0be3410553df2cc2f16c4a37b012ec t/parser-ntriples.t
+SHA1 a170cdaa46671f92abe24bad7d5bfdabafadcfd6 t/parser-sparqlxml.t
+SHA1 6d8b69cfaea23785c31156d1c0905ef04e89fb23 t/parser-turtle.t
+SHA1 fbe6236efc5034b21adbb8a0aec1e5f8b5382c4b t/parser.t
+SHA1 e622e6b2ba23465f5dc1bc496ece257ceb0eab16 t/serializer-canonicalntriples.t
+SHA1 1eaa909227db08d88d06c5bffe8cb0d0f2f72de7 t/serializer-nquads.t
+SHA1 49846ed64651290ecfe453f3f483be6bb0e00b13 t/serializer-ntriples.t
+SHA1 c3411c09861dc4fad5a38399371d8cb16c207313 t/simple-eval.t
+SHA1 e4299ec214975a4be6c328657438aa2dd53916c1 t/simple.t
+SHA1 998ecb615deb62962eb1ebfc04b8c1f450d6fbef t/store-memory.t
+SHA1 a3c131cd0cf1fc7d4246d737e33c60bc75016983 t/store-simple.t
+SHA1 1ba77a08ba8b7d8c87bf30aa437fde710d3055a4 t/term-map.t
+SHA1 a69c7f1ff4a11e7ea01703f657bd56bd362523b3 t/term.t
+SHA1 b8e21795fddc9de0f66b65d22a4f70c377c3e00c xt/dawg-eval11.t
+SHA1 8fce98e8ce4b5ef5ea5e50e366e4014a8b659e27 xt/pod-coverage.t
+SHA1 6387af7a5fde0747be5bc9ad2ec15ca9759bd95a xt/pod.t
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+Comment: GPGTools - http://gpgtools.org
+
+iEYEARECAAYFAlQkSeAACgkQhPK6VMqoyC2/BgCeO4JCxAlxBDXXR1IuZiccRsGq
+t0cAn2W85YZ5FRgOd4LT2p7+p/7KGIVa
+=6YAe
+-----END PGP SIGNATURE-----
