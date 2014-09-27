@@ -204,11 +204,14 @@ package Translator 0.1 {
 			foreach my $o (@ops) {
 				my ($str, $op, $scalar_vars, @vars)	= @$o;
 				my $operands	= [map { $self->translate_expr($_) } grep { blessed($_) } @vars];
+				my $distinct	= ($op =~ /-DISTINCT$/);
+				$op				=~ s/-DISTINCT$//;
 				my $expr	= Attean::AggregateExpression->new(
-					operator => $op,
-					children => $operands,
-					scalar_vars => $scalar_vars,
-					variable => variable(".$str"),
+					distinct	=> $distinct,
+					operator	=> $op,
+					children	=> $operands,
+					scalar_vars	=> $scalar_vars,
+					variable	=> variable(".$str"),
 				);
 				push(@aggs, $expr);
 			}
@@ -373,6 +376,7 @@ my $result	= GetOptions ("verbose" => \$verbose, "debug" => \$debug, "benchmark"
 
 my $data	= shift;
 my $qfile	= shift;
+my $base	= Attean::IRI->new('file://' . File::Spec->rel2abs($data));
 
 open(my $fh, '<:encoding(UTF-8)', $data);
 
@@ -384,10 +388,11 @@ try {
 
 	{
 		warn "Parsing data...\n" if ($verbose);
-		my $parser	= Attean->get_parser('Turtle')->new();
+		my $pclass	= Attean->get_parser( filename => $data ) // 'AtteanX::Parser::Turtle';
+		my $parser	= $pclass->new(base => $base);
 		my $iter	= $parser->parse_iter_from_io($fh);
 		my $quads	= $iter->as_quads($graph);
-		$store->add_iter($quads);
+		$model->add_iter($quads);
 	}
 
 	if ($debug) {
@@ -416,8 +421,7 @@ try {
 	my $e		= Attean::SimpleQueryEvaluator->new( model => $model, default_graph => $graph );
 	if ($benchmark) {
 		timethese(5, {
-			'baseline'	=> sub { local($ENV{ATTEAN_NO_MERGE_JOIN}) = 1; my @e = $e->evaluate($a, $graph)->elements },
-			'mergejoin'	=> sub { my @e = $e->evaluate($a, $graph)->elements },
+			'baseline'	=> sub { my @e = $e->evaluate($a, $graph)->elements },
 		});
 	} else {
 		my $iter	= $e->evaluate($a, $graph);

@@ -110,7 +110,6 @@ t/store-memory.t
 t/store-simple.t
 t/term-map.t
 t/term.t
-xt/dawg-eval11.t
 xt/pod-coverage.t
 xt/pod.t
 SIGNATURE                                Public-key signature (added by MakeMaker)

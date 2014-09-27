@@ -48,4 +48,4 @@ resources:
   homepage: http://search.cpan.org/dist/Attean/
   license: http://dev.perl.org/licenses/
   repository: http://github.com/kasei/attean/
-version: 0.000_01
+version: '0.001'

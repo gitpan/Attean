@@ -10,7 +10,7 @@ AtteanX::Parser::Turtle - Turtle RDF Parser
 
 =head1 VERSION
 
-This document describes AtteanX::Parser::Turtle version 0.000
+This document describes AtteanX::Parser::Turtle version 0.001
 
 =head1 SYNOPSIS
 
@@ -102,7 +102,6 @@ the data read from the L<IO::Handle> object C<< $fh >>.
 			open( $fh, '<', $filename ) or die $!;
 		}
 	
-		binmode($fh, ':encoding(UTF-8)');
 		my $l	= AtteanX::Parser::Turtle::Lexer->new($fh);
 		$self->_parse($l);
 	}
@@ -119,7 +118,6 @@ the data read from the UTF-8 encoded byte string C<< $data >>.
 		my $self	= shift;
 		my $data	= shift;
 	
-		$data	= Encode::encode("utf-8", $data);
 		open(my $fh, '<:encoding(UTF-8)', \$data);
 		my $l	= AtteanX::Parser::Turtle::Lexer->new($fh);
 		$self->_parse($l);
