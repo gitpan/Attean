@@ -1,18 +1,23 @@
 =head1 NAME
 
-Attean::API::TripleParser - Role for parsers of L<Attean::API::Triple> objects
+Attean::API::IRI - Role representing RDF IRI terms
 
 =head1 VERSION
 
-This document describes Attean::API::TripleParser version 0.001_01
+This document describes Attean::API::IRI version 0.001_01
+
+=head1 SYNOPSIS
+
+  use v5.14;
+  use Attean;
 
 =head1 DESCRIPTION
 
-The Attean::API::TripleParser role defines parsers of L<Attean::API::Triple> objects.
+This is a Moo role that IRI RDF terms consume.
 
 =head1 ROLES
 
-This role consumes the L<Attean::API::Parser> role.
+This role consumes the L<Attean::API::Term> and L<Attean::API::BlankOrIRI> roles.
 
 =head1 METHODS
 
@@ -20,10 +25,14 @@ This role provides default implementations of the following methods:
 
 =over 4
 
-=item C<< handled_type >>
+=item C<< ebv >>
 
-Returns a L<Type::Tiny> object for objects which consume the
-L<Attean::API::Triple> role.
+Returns the boolean value of this term.
+
+=item C<< compare( $iri ) >>
+
+Returns -1, 0, or 1 if C<< $iri >> is less than, equal to, or greater than
+the referent based on SPARQL sorting order.
 
 =back
 

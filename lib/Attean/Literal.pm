@@ -7,7 +7,7 @@ Attean::Literal - RDF Literals
 
 =head1 VERSION
 
-This document describes Attean::Literal version 0.001
+This document describes Attean::Literal version 0.001_01
 
 =head1 SYNOPSIS
 
@@ -32,7 +32,7 @@ package Attean::Literal 0.001 {
 	use Attean::API::Term;
 	use IRI;
 	use Sub::Install;
-	use Sub::Name;
+	use Sub::Util qw(set_subname);
 	use Scalar::Util qw(blessed);
 	use namespace::clean;
 	
@@ -112,7 +112,7 @@ package Attean::Literal 0.001 {
 				return $class->new( value => shift, datatype => "http://www.w3.org/2001/XMLSchema#$method" );
 			};
 			Sub::Install::install_sub({
-				code	=> subname("${method}", $code),
+				code	=> set_subname("${method}", $code),
 				as		=> "${method}"
 			});
 		}

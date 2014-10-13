@@ -27,6 +27,7 @@ requires:
   DateTime::Format::W3CDTF: 0
   Digest::SHA: 0
   Encode: 0
+  HTTP::Negotiate: 0
   I18N::LangTags: 0
   IRI: 0.004
   List::Util: 0
@@ -35,11 +36,11 @@ requires:
   Scalar::Util: 0
   Set::Scalar: 0
   Sub::Install: 0
-  Sub::Name: 0
+  Sub::Util: 1.4
   Try::Tiny: 0
   Type::Tiny: 0
   URI::Escape: 1.36
-  URI::Namespace: 0
+  URI::NamespaceMap: 0.12
   namespace::clean: 0
   perl: 5.14.0
 resources:
@@ -48,4 +49,4 @@ resources:
   homepage: http://search.cpan.org/dist/Attean/
   license: http://dev.perl.org/licenses/
   repository: http://github.com/kasei/attean/
-version: '0.001'
+version: 0.001_01

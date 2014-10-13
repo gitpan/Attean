@@ -7,7 +7,7 @@ Attean::API::Model - RDF Model
 
 =head1 VERSION
 
-This document describes Attean::API::Model version 0.001
+This document describes Attean::API::Model version 0.001_01
 
 =head1 DESCRIPTION
 
@@ -118,7 +118,7 @@ use Attean::API::Binding;
 package Attean::API::Model 0.001 {
 	use Moo::Role;
 	use Sub::Install;
-	use Sub::Name;
+	use Sub::Util qw(set_subname);
 	use URI::Namespace;
 	use Scalar::Util qw(blessed);
 	use List::MoreUtils qw(uniq);
@@ -218,7 +218,7 @@ package Attean::API::Model 0.001 {
 				return $nodes;
 			};
 			Sub::Install::install_sub({
-				code	=> subname("${method}s", $code),
+				code	=> set_subname("${method}s", $code),
 				as		=> "${method}s"
 			});
 		}
@@ -310,6 +310,14 @@ package Attean::API::BulkUpdatableModel 0.001 {
 	requires 'begin_bulk_updates';
 	requires 'end_bulk_updates';
 	
+	around [qw(load_triples add_iter add_list)] => sub {
+		my $orig	= shift;
+		my $self	= shift;
+		$self->begin_bulk_updates();
+		$self->$orig(@_);
+		$self->end_bulk_updates();
+	};
+
 	# End bulk updates the moment a read operation is performed...
 	before [qw(get_quads get_bindings count_quads get_graphs subject predicate object graph)] => sub {
 		my $self	= shift;

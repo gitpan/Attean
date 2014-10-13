@@ -14,7 +14,7 @@ build_requires	'Test::Exception'			=> 0;
 perl_version	'5.014';
 
 requires		'IRI'						=> 0.004;
-requires		'URI::Namespace'			=> 0;
+requires		'URI::NamespaceMap'			=> 0.12;
 requires		'Digest::SHA'				=> 0;
 requires		'Encode'					=> 0;
 requires		'List::Util'				=> 0;
@@ -22,7 +22,7 @@ requires		'Scalar::Util'				=> 0;
 requires		'Set::Scalar'				=> 0;
 requires		'Type::Tiny'				=> 0;
 requires		'Moo'						=> 1.006000;
-requires		'Sub::Name'					=> 0;
+requires		'Sub::Util'					=> 1.40;
 requires		'Sub::Install'				=> 0;
 requires		'Set::Scalar'				=> 0;
 requires		'namespace::clean'			=> 0;
@@ -32,6 +32,8 @@ requires		'I18N::LangTags'			=> 0;
 requires		'URI::Escape'				=> 1.36;
 requires		'RDF::Query'				=> 2.910;
 requires		'Try::Tiny'					=> 0;
+requires		'HTTP::Negotiate'			=> 0;
+
 
 resources(
 	'homepage'   => "http://search.cpan.org/dist/Attean/",

@@ -4,7 +4,7 @@ AtteanX::Serializer::NTriples - N-Triples Serializer
 
 =head1 VERSION
 
-This document describes AtteanX::Serializer::NTriples version 0.001
+This document describes AtteanX::Serializer::NTriples version 0.001_01
 
 =head1 SYNOPSIS
 
@@ -35,7 +35,17 @@ package AtteanX::Serializer::NTriples 0.001 {
 
 	extends 'AtteanX::Serializer::NTuples';
 	has 'canonical_media_type' => (is => 'ro', isa => Str, init_arg => undef, default => 'application/n-triples');
-	has 'media_types' => (is => 'ro', isa => ArrayRef[Str], init_arg => undef, default => sub { ['application/n-triples'] });
+
+=item C<< media_types >>
+
+Returns a list of media types that identify the format produced by this serializer.
+
+=cut
+
+	sub media_types {
+		return [qw(application/n-triples text/plain)];
+	}
+
 	with 'Attean::API::TripleSerializer';
 	with 'Attean::API::AppendableSerializer';
 }
